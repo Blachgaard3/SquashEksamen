@@ -1,0 +1,892 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*efter ccs reset*/
+
+
+
+ 
+
+.header {
+    grid-area: header;
+    position: relative;
+    border-bottom: 2px #1c1c1d;
+    border-style: solid;
+    max-height: 13.75rem;
+    min-height: 10rem;
+    background-color: rgb(255, 204, 18);
+}
+
+.hero {
+    grid-area: hero;
+    position: relative;
+    height: 23rem;
+    max-height: 30rem;
+    overflow: hidden;
+}
+
+
+
+.text {
+    grid-area: text;
+    position: relative;
+    border: 2px #1c1c1d;
+    border-style: solid;
+    background-color: rgba(203, 198, 198, 0.494);
+    min-height: 26rem;
+    box-shadow: 0px 2px 0px 2px #1c1c1d;
+    text-align: center;
+    color:rgb(246, 136, 9);
+}
+
+.footer {
+    grid-area: footer;
+    position: relative;
+    border: 2px #1c1c1d;
+    border-style: solid;
+    background-color: rgb(208, 138, 8);
+    min-height: 14rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: 'Arvo';
+    margin-top: 1rem;
+
+}
+
+.main {
+    grid-area: main;
+    position: relative;
+    box-shadow: 1px 3px 0px 0px rgb(255, 108, 3);
+    border-style: solid;
+    background-color: rgb(247, 135, 7);
+    min-height: 10rem;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    text-align: center;
+
+
+
+}
+
+.main:hover {
+    background-color: rgb(171, 114, 7);
+
+}
+
+
+
+.right {
+    grid-area: right;
+    position: relative;
+    border: 2px #1c1c1d;
+    border-style: solid;
+    background-color: rgba(203, 198, 198, 0.494);
+    min-height: 24rem;
+    margin-left: 1rem;
+    box-shadow: 0px 2px 0px 2px #1c1c1d;
+
+}
+
+.grid-container {
+    display: grid;
+    grid:
+        'header header header header header header'
+        'hero hero hero hero hero hero'
+        '. main main main main .'
+        '. text text right right .'
+        'footer footer footer footer footer footer';
+
+
+    background-color: rgb(255, 204, 18);
+    min-height: 95rem;
+    background-image: url('../img/sne.png');
+    z-index: 100;
+
+
+}
+
+.text:hover {
+    background-color: rgb(208, 138, 8);
+}
+
+#menu-toggle {
+    display: none;
+
+}
+
+.menu {
+    display: none;
+    flex-direction: row;
+    min-width: 100%;
+}
+
+.menu1 {
+    display: flex;
+    flex-direction: row;
+    min-width: 100%;
+}
+
+.grid-container>div {
+
+    text-align: center;
+    padding: 0px 0;
+    font-size: 30px;
+}
+
+
+ul {
+    display: none;
+}
+
+.FlexNav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    z-index: -1;
+
+
+}
+
+.NavBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    min-height: 5.40rem;
+    min-width: 25%;
+    background-color: rgb(246, 136, 9);
+    text-decoration: none;
+    color: black;
+    border: 1px #1c1c1d;
+    border-style: solid;
+    box-shadow: 0px 0px 2px 2px #1c1c1d;
+    font-family: 'Arvo';
+}
+
+.NavBtn0 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    min-height: 5.40rem;
+    min-width: 25%;
+    background-color: rgb(197, 107, 4);
+    text-decoration: none;
+    color: black;
+    border: 1px #1c1c1d;
+    border-style: solid;
+    box-shadow: 0px 0px 2px 2px #1c1c1d;
+    font-family: 'Arvo';
+}
+
+.NavBtn:hover {
+    background-color: rgb(171, 114, 7);
+}
+
+.logo {
+    display: none;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 4rem;
+    -webkit-text-stroke: 0.3px rgb(71, 70, 70);
+
+}
+
+.logo1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 4rem;
+    -webkit-text-stroke: 0.3px rgb(71, 70, 70);
+
+}
+
+.logo2 {
+    display: none;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 4rem;
+    -webkit-text-stroke: 0.3px rgb(71, 70, 70);
+
+
+}
+ 
+.logoimg {
+    max-width: 80px;
+    max-height: 68px;
+    margin-left: 1rem;
+    align-self: center;
+}
+
+
+h1 {
+    font-family: 'Abril Fatface';
+    color: rgb(242, 240, 240);
+    font: bolder;
+     font-size: 3rem;
+
+
+
+}
+
+h2 {
+    font-size: 2rem;
+    font-family: 'Exo 2';
+    color: black;
+
+}
+
+h3 {
+    font-family: 'Abril Fatface';
+    color: rgb(255, 255, 255);
+    font: bolder;
+    font-size: 2.5rem;
+    -webkit-text-stroke: 0.3px black;
+
+}
+
+h5 {
+
+    font-size: 2rem;
+}
+
+h6 {
+    font-size: 3rem;
+    font-family: 'Exo 2';
+    color: black;
+}
+
+p {
+
+    font-size: 1.8rem;
+    font-family: 'Exo 2';
+    color: black;
+    margin-top: 0.5rem;
+}
+
+.FrontHero {
+    position: relative;
+    z-index: 1;
+    max-width: 100%;
+    min-height: 22.188rem;
+    max-height: 100%;
+    object-fit: cover;
+    border-bottom: 2px #1c1c1d;
+    border-style: solid;
+}
+
+.produktbillede1 {
+    max-width: 25rem;
+    max-height: 20.25rem;
+
+}
+
+
+
+.FlexboxSquash {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+
+
+}
+
+.konkurencelink {
+    color: rgb(246, 136, 9);
+
+}
+
+.konkurencelink1 {
+    color: rgb(246, 136, 9);
+    align-self: center;
+
+}
+
+.konkurencelink:hover {
+    color: rgb(249, 248, 248);
+
+}
+
+.variantbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 2px #1c1c1d;
+    border-style: solid;
+    max-width: 11rem;
+    min-height: 16.875rem;
+    margin: 0.8rem;
+    background-color: rgba(172, 123, 37, 0.494);
+    border-radius: 32%;
+}
+
+.VariantImg {
+    max-width: 11rem;
+    max-height: 11rem;
+
+}
+
+.variant {
+    grid-area: hero;
+    position: relative;
+    max-height: 290.5rem;
+    min-height: 52.5rem;
+    margin-bottom: 3rem;
+
+}
+
+.maintext {
+    grid-area: main;
+    position: relative;
+    max-height: 77.5rem;
+    min-height: 12.5rem;
+    border: 2px #1c1c1d;
+    border-style: solid;
+    background-color: rgba(203, 198, 198, 0.494);
+}
+
+.maintext2 {
+    grid-area: main;
+    position: relative;
+    max-height: 67.5rem;
+    min-height: 12.5rem;
+    border: 2px #1c1c1d;
+    border-style: solid;
+    background-color: rgba(203, 198, 198, 0.494);
+}
+
+.Name {
+    min-width: 15rem;
+    min-height: 2rem;
+    align-self: stretch;
+}
+
+.labelbox {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-top: 2px #1c1c1d;
+    border-style: solid;
+}
+
+
+
+.submitbtn {
+    height: 3rem;
+    width: 15rem;
+    border: 2px #1c1c1d;
+    border-style: solid;
+    align-self: center;
+    box-shadow: 0px 3px 5px 0px #1c1c1d;
+    border-radius: 20%;
+    background-color: rgb(208, 138, 8);
+    color: black;
+}
+
+.submitbtn:hover {
+
+    background-color: rgb(171, 114, 7);
+    color: rgb(171, 114, 7);
+}
+
+.submitbtn {
+    height: 3rem;
+    width: 15rem;
+    border: 2px #1c1c1d;
+    border-style: solid;
+    box-shadow: 0px 3px 5px 0px #1c1c1d;
+    border-radius: 20%;
+    background-color: rgb(246, 136, 9);
+    color: black;
+}
+
+.tilbageside {
+
+    min-height: 14rem;
+}
+
+.footer {
+    list-style: none;
+
+    line-height: 2.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.footer_head {
+    font-size: 1rem;
+}
+
+.footer_content {
+
+    color: rgb(0, 0, 0);
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.footer_icon {
+    width: 4rem;
+    margin: 0px 5px;
+}
+
+.footer_links {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    display: block;
+    font-size: 1rem;
+}
+
+.footer_links:hover {
+    color: rgb(255, 255, 255);
+}
+
+.FooterText {
+
+    color: rgb(0, 0, 0);
+    display: block;
+    font-size: 1rem;
+}
+
+
+
+
+
+
+
+@media (max-width: 900px) {
+
+
+
+    .logoimg {
+        max-width: 50px;
+        max-height: 48px;
+        margin-left: 1rem;
+        align-self: center;
+    }
+    
+    .grid-container {
+        display: grid;
+        grid:
+            'header header header header header header'
+            'hero hero hero hero hero hero'
+            '. main main main main .'
+            '. text text text text .'
+            '. right right right right .'
+            'footer footer footer footer footer footer';
+
+
+
+
+
+    }
+
+    .text {
+        grid-area: text;
+        position: relative;
+        border-style: solid;
+        min-height: 10rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 1rem;
+        text-align: center;
+        margin-left: 1rem;
+    }
+
+    .right {
+        grid-area: right;
+        position: relative;
+        border-style: solid;
+        min-height: 10rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 1rem;
+        text-align: center;
+
+    }
+
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h4 {
+        font-size: 1.5rem;
+    }
+
+    .Footer_space1 {
+        display: none;
+    }
+
+
+    .NavBtn {
+        min-width: 100%;
+
+    }
+
+    .NavBtn0 {
+        min-width: 100%;
+
+    }
+
+    .menu1 {
+        display: none;
+    }
+
+    .logo1 {
+        display: none;
+    }
+
+    .logo {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .logo2 {
+        display: block;
+
+    }
+
+    /* fra https://alvarotrigo.com/blog/hamburger-menu-css/ */
+    @import url(https://fonts.googleapis.com/css?family=Raleway);
+
+    .Flexnav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        background-color: rgb(246, 136, 9);
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        color: #FFF;
+        height: 50px;
+        padding: 1em;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .menu>li {
+        margin: 0 1rem;
+        overflow: hidden;
+    }
+
+    .menu-button-container {
+        display: none;
+        height: 100%;
+        width: 30px;
+        cursor: pointer;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #menu-toggle {
+        display: none;
+    }
+
+    .menu-button,
+    .menu-button::before,
+    .menu-button::after {
+        display: block;
+        background-color: #fff;
+        position: absolute;
+        height: 4px;
+        width: 30px;
+        transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+        border-radius: 2px;
+    }
+
+    .menu-button::before {
+        content: '';
+        margin-top: -8px;
+    }
+
+    .menu-button::after {
+        content: '';
+        margin-top: 8px;
+    }
+
+    #menu-toggle:checked+.menu-button-container .menu-button::before {
+        margin-top: 0px;
+        transform: rotate(405deg);
+    }
+
+    #menu-toggle:checked+.menu-button-container .menu-button {
+        background: rgba(255, 255, 255, 0);
+    }
+
+    #menu-toggle:checked+.menu-button-container .menu-button::after {
+        margin-top: 0px;
+        transform: rotate(-405deg);
+    }
+
+    @media (max-width: 900px) {
+        .menu-button-container {
+            display: flex;
+        }
+
+        .menu {
+            position: absolute;
+            top: 0;
+            margin-top: 100px;
+            left: 0;
+            flex-direction: column;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            z-index: 5;
+        }
+
+        #menu-toggle~.menu li {
+            height: 0;
+            margin: 0;
+            padding: 0;
+            border: 0;
+            transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        #menu-toggle:checked~.menu li {
+            border: 1px solid #333;
+            height: 2.5em;
+            padding: 0.5em;
+            transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .menu>li {
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0.5em 0;
+            width: 100%;
+            color: white;
+            background-color: rgb(244, 179, 48);
+        }
+
+        .menu>li:not(:last-child) {
+            border-bottom: 1px solid rgb(0, 0, 0);
+        }
+    }
+
+
+
+
+}
+
+
+
+
+
+@media (max-width: 560px) {
+
+    .logoimg {
+     display: none;
+    }
+
+    .flexNav {
+        max-width: 325px;
+    }
+
+    .Footer_space1 {
+        display: block;
+    }
+
+
+    .produktbillede1 {
+        max-width: 15rem;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1.0rem;
+    }
+
+    h6 {
+        font-size: 2rem;
+    }
+
+
+    .grid-container {
+        display: grid;
+        grid:
+            'header header header header header header'
+            'hero hero hero hero hero hero'
+            '. main main main main .'
+            ' . text text text text .'
+            '. right right right right .'
+            'footer footer footer footer footer footer';
+
+
+
+
+    }
+
+}
